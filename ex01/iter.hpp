@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   template.hpp                                       :+:      :+:    :+:   */
+/*   iter.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lbastien <lbastien@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/12 11:20:32 by lbastien          #+#    #+#             */
-/*   Updated: 2024/09/13 11:43:41 by lbastien         ###   ########.fr       */
+/*   Updated: 2024/09/13 16:21:55 by lbastien         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEMPLATE_HPP
-#define TEMPLATE_HPP
+#ifndef ITER_HPP
+#define ITER_HPP
 
 #include<iostream>
 #include<string>
 
 
-
-template<typename T> void swap(T& a, T& b) {
-    T tmp = a;
-    a = b;
-    b = tmp;
+template<typename T, typename V > void iter(T arr[], int n, V fct) {
+    int i;
+    for (i=0;i<n;i++)
+        fct(arr[i]);
 }
 
-template<typename T> T min(T a, T b) {
-    if (a < b )
-        return a;
-    return b; 
+template<typename T> void printElement(T i) {
+    std::cout << " " << i;
 }
 
-template<typename T> T max(T a, T b) {
-    if (a > b )
-        return a;
-    return b;
-}
 #endif
