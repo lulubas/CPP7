@@ -1,4 +1,4 @@
-#include "template.hpp"
+#include "Template.hpp"
 
 int main( void ) {
     int a = 2;
