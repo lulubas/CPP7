@@ -1,4 +1,4 @@
-#include "Iter.hpp"
+#include "iter.hpp"
 
 int main( void ) {
     int i;
@@ -10,6 +10,6 @@ int main( void ) {
 
     std::cout << std::endl << "Checking each element using the iter function:";
     iter(arr, 5, printElement<int>);
-    
+
     return 0;
 }
