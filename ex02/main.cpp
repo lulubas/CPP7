@@ -1,12 +1,25 @@
-#include "iter.hpp"
+#include "Array.hpp"
 
 int main( void ) {
     int i;
-    int arr[5] = {0, 1, 2, 3, 4};
-    std::cout << "Array is:";
+    std::string testStr = "Hola";
+    float testFloat = 42.42;
+    Array<std::string> testArrayStr(5);
+    Array<float> testArrayFloat(5);
+
+    std::cout << "String=" << testStr << std::endl; 
     for (i = 0;i<5;i++)
-        std::cout << " " << arr[i]; 
-    std::cout << std::endl << "Checking each element using the iter function:";
-    iter(arr, 5, printElement<int>);
+        testArrayStr[i] = testStr;
+    std::cout << "Content of the array:" << std::endl;
+    for (i = 0;i<5;i++)
+        std::cout << "Array[" << i << "]=" << testArrayStr[i] << std::endl;
+
+    std::cout << std::endl << "Float=" << testFloat << std::endl; 
+    for (i = 0;i<5;i++)
+        testArrayFloat[i] = testFloat;
+    std::cout << "Content of the array:" << std::endl;
+    for (i = 0;i<5;i++)
+        std::cout << "Array[" << i << "]=" << testArrayFloat[i] << std::endl;
+    
     return 0;
 }
